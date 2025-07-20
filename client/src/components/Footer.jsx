@@ -129,7 +129,7 @@ const Footer = () => {
                 <li>📍 Unit-1, Bhubaneswar, Odisha – 751001</li>
                 {/* <li></li> */}
                 <li>📞 +91 9125849569</li>
-                <li>✉️ gowheels@outlook.com</li>
+                <li>✉️ gowheels1800@gmail.com</li>
               </ul>
             </div>
           </motion.div>

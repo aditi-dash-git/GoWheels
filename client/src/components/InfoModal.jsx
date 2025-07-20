@@ -11,7 +11,7 @@ const MODAL_CONTENT = {
   help: {
     title: "Help Center",
     content:
-      "For any assistance, reach out to our support team at gowheels@outlook.com or call 1800-010-220.",
+      "For any assistance, reach out to our support team at gowheels1800@gmail.com or call 1800-010-220.",
   },
   terms: {
     title: "Terms of Service",
