@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./car-rental-logo.png";
 import gmail_logo from "./gmail_logo.svg";
 import facebook_logo from "./facebook_logo.svg";
 import instagram_logo from "./instagram_logo.svg";
@@ -30,8 +30,9 @@ import filter_icon from "./filter_icon.svg"
 import edit_icon from "./edit_icon.svg"
 import calendar_icon_colored from "./calendar_icon_colored.svg"
 import location_icon_colored from "./location_icon_colored.svg"
-import testimonial_image_1 from "./testimonial_image_1.png"
-import testimonial_image_2 from "./testimonial_image_2.png"
+import testimonial_image_1 from "./testimonial-male1.jpg"
+import testimonial_image_2 from "./testimonial-male2.jpg"
+import testimonial_image_3 from "./testimonial-female1.jpg"
 import main_car from "./main_car.png"
 import banner_car_image from "./banner_car_image.png"
 import user_profile from "./user_profile.png"
@@ -41,7 +42,35 @@ import car_image2 from "./car_image2.png"
 import car_image3 from "./car_image3.png"
 import car_image4 from "./car_image4.png"
 
-export const cityList = ['New York', 'Los Angeles', 'Houston', 'Chicago']
+export const cityList = [
+  'Bhubaneswar',
+  'Cuttack',
+  'Rourkela',
+  'Puri',
+  'Sambalpur',
+  'Berhampur',
+  'Balasore',
+  'Baripada',
+  'Jharsuguda',
+  'Angul',
+  'Paradeep',
+  'Koraput',
+  'Rayagada',
+  'Kendujhar',
+  'Dhenkanal',
+  'Jeypore',
+  'Bargarh',
+  'Bhadrak',
+  'Nabarangpur',
+  'Kalahandi',
+  'Nuapada',
+  'Ganjam',
+  'Phulbani',
+  'Sundargarh',
+  'Talcher',
+  'Titlagarh'
+];
+
 
 export const assets = {
     logo,
@@ -78,6 +107,7 @@ export const assets = {
     filter_icon,
     testimonial_image_1,
     testimonial_image_2,
+    testimonial_image_3,
     main_car,
     banner_car_image,
     car_image1,
@@ -103,7 +133,7 @@ export const ownerMenuLinks = [
 
 export const dummyUserData = {
   "_id": "6847f7cab3d8daecdb517095",
-  "name": "GreatStack",
+  "name": "User",
   "email": "admin@example.com",
   "role": "owner",
   "image": user_profile,
@@ -113,68 +143,68 @@ export const dummyCarData = [
     {
         "_id": "67ff5bc069c03d4e45f30b77",
         "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "BMW",
-        "model": "X5",
+        "brand": "Maruti Suzuki",
+        "model": "Swift",
         "image": car_image1,
         "year": 2006,
-        "category": "SUV",
+        "category": "Hatchback",
         "seating_capacity": 4,
-        "fuel_type": "Hybrid",
-        "transmission": "Semi-Automatic",
-        "pricePerDay": 300,
-        "location": "New York",
-        "description": "The BMW X5 is a mid-size luxury SUV produced by BMW. The X5 made its debut in 1999 as the first SUV ever produced by BMW.",
+        "fuel_type": "Petrol",
+        "transmission": "Manual",
+        "pricePerDay": 1200,
+        "location": "New Delhi",
+        "description": "The Maruti Suzuki Swift is a popular hatchback produced by Maruti Suzuki India Limited. Known for its compact size and fuel efficiency, the Swift has been a top choice among Indian car buyers since its launch.",
         "isAvailable": true,
         "createdAt": "2025-04-16T07:26:56.215Z",
     },
     {
         "_id": "67ff6b758f1b3684286a2a65",
         "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Toyota",
-        "model": "Corolla",
+        "brand": "Hyundai",
+        "model": "Verna",
         "image": car_image2,
         "year": 2021,
         "category": "Sedan",
         "seating_capacity": 4,
         "fuel_type": "Diesel",
-        "transmission": "Manual",
-        "pricePerDay": 130,
-        "location": "Chicago",
-        "description": "The Toyota Corolla is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
+        "transmission": "Automatic",
+        "pricePerDay": 2000,
+        "location": "Mumbai",
+        "description": "The Hyundai Verna is a compact sedan produced by Hyundai Motor India Limited. It offers a blend of style, comfort, and performance, making it a preferred choice for city driving.",
         "isAvailable": true,
         "createdAt": "2025-04-16T08:33:57.993Z",
     },
     {
         "_id": "67ff6b9f8f1b3684286a2a68",
         "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Jeep ",
-        "model": "Wrangler",
+        "brand": "Mahindra",
+        "model": "Thar",
         "image": car_image3,
         "year": 2023,
         "category": "SUV",
         "seating_capacity": 4,
-        "fuel_type": "Hybrid",
-        "transmission": "Automatic",
-        "pricePerDay": 200,
-        "location": "Los Angeles",
-        "description": "The Jeep Wrangler is a mid-size luxury SUV produced by Jeep. The Wrangler made its debut in 2003 as the first SUV ever produced by Jeep.",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "pricePerDay": 3500,
+        "location": "Bangalore",
+        "description": "The Mahindra Thar is an iconic off-road SUV manufactured by Mahindra & Mahindra Limited. Known for its rugged design and powerful performance, the Thar is a favorite among adventure enthusiasts in India.",
         "isAvailable": true,
         "createdAt": "2025-04-16T08:34:39.592Z",
     },
     {
         "_id": "68009c93a3f5fc6338ea7e34",
         "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Ford",
-        "model": "Neo 6",
+        "brand": "Tata",
+        "model": "Nexon",
         "image": car_image4,
         "year": 2022,
-        "category": "Sedan",
-        "seating_capacity": 2,
-        "fuel_type": "Diesel",
-        "transmission": "Semi-Automatic",
-        "pricePerDay": 209,
-        "location": "Houston",
-        "description": "This is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
+        "category": "SUV",
+        "seating_capacity": 5,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "pricePerDay": 2500,
+        "location": "Chennai",
+        "description": "The Tata Nexon is a compact SUV manufactured by Tata Motors Limited. With its modern design and advanced features, the Nexon offers a comfortable and safe driving experience for urban and rural India.",
         "isAvailable": true,
         "createdAt": "2025-04-17T06:15:47.318Z",
     }

@@ -91,3 +91,50 @@ export const getCars = async (req, res) => {
     res.json({ success: false, message: error.message });
   }
 };
+
+// Get a specific user by ID (admin use)
+export const getUserById = async (req, res) => {
+  try {
+    const userId = req.params.id;
+
+    // Validate ObjectId format
+    if (!userId || userId.length !== 24) {
+      return res.status(400).json({ success: false, message: "Invalid user ID" });
+    }
+
+    const user = await User.findById(userId).select("-password"); // Don't return hashed password
+
+    if (!user) {
+      return res.status(404).json({ success: false, message: "User not found" });
+    }
+
+    res.json({ success: true, user });
+  } catch (error) {
+    console.error("Error in getUserById:", error.message);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+};
+
+// Delete user and their cars (admin-only)
+export const deleteUserAndCars = async (req, res) => {
+  try {
+    const userId = req.params.id;
+
+    // ✅ Ensure only admins can delete
+    if (req.user.role !== 'admin') {
+      return res.status(403).json({ success: false, message: 'Access denied: Admins only' });
+    }
+
+    // Validate and delete
+    const user = await User.findById(userId);
+    if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+
+    await Car.deleteMany({ owner: userId });
+    await User.findByIdAndDelete(userId);
+
+    res.json({ success: true, message: 'User and cars deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+};
+

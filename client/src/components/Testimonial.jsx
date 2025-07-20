@@ -6,25 +6,25 @@ import { motion } from "motion/react";
 const Testimonial = () => {
   const testimonials = [
     {
-      name: "Emma Rodriguez",
-      location: "Barcelona, Spain",
+      name: "Priya Ranjan",
+      location: "Bhubaneswar, Odisha",
       image: assets.testimonial_image_1,
       testimonial:
-        "Booking a car was incredibly easy and hassle-free. The vehicle was clean, well-maintained, and perfect for our road trip. Highly recommend this service!",
+        "Booking with GoWheels was super convenient! The car was in great condition and perfect for my family trip to Puri. Highly recommend!",
     },
     {
-      name: "Liam Johnson",
-      location: "New York, USA",
+      name: "Sourav Das",
+      location: "Cuttack, Odisha",
       image: assets.testimonial_image_2,
       testimonial:
-        "Absolutely loved the convenience and customer support. I picked up the car right on time and had no issues during my entire trip. Will definitely use this service again!",
+        "Excellent service and prompt support. I rented a car for my wedding functions and it was a smooth experience. GoWheels is now my go-to!",
     },
     {
-      name: "Sophia Lee",
-      location: "Seoul, South Korea",
-      image: assets.testimonial_image_1,
+      name: "Ananya Patra",
+      location: "Sambalpur, Odisha",
+      image: assets.testimonial_image_3,
       testimonial:
-        "One of the best car rental experiences I've had. The pricing was transparent, the booking process was quick, and the car ran perfectly throughout my vacation.",
+        "Very professional and transparent pricing. The car was clean and well-maintained. Great option for traveling across Odisha!",
     },
   ];
 
@@ -32,7 +32,7 @@ const Testimonial = () => {
     <div className="py-28 px-6 md:px-16 lg:px-24 xl:px-44">
       <Title
         title="What Our Customers Say"
-        subtitle="Discover why discerning travelers choose StayVenture for their luxury accommodations around the world."
+        subtitle="See why people across Odisha trust GoWheels for safe and reliable car rentals."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-18">
@@ -40,10 +40,8 @@ const Testimonial = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index* 0.2, ease: "easeOut" }}
-
-            viewport={{once: true, amount: 0.3}}
-            
+            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
             key={index}
             className="bg-white p-6 rounded-xl shadow-lg hover:translate-y-1 transition-all duration-500"
           >
@@ -54,7 +52,7 @@ const Testimonial = () => {
                 alt={testimonial.name}
               />
               <div>
-                <p className=" text-xl">{testimonial.name}</p>
+                <p className="text-xl">{testimonial.name}</p>
                 <p className="text-gray-500">{testimonial.location}</p>
               </div>
             </div>

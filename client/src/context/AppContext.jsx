@@ -10,6 +10,10 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
 
 
+  const [showModal, setShowModal] = useState(null); // 'about', 'help', 'terms', 'privacy', 'insurance', etc.
+
+
+
   const navigate = useNavigate();
   const currency = import.meta.env.VITE_CURRENCY;
 
@@ -81,6 +85,7 @@ const logout = ()=>{
 
 
   const value = {
+    showModal, setShowModal,
     navigate, currency, axios, 
     user, setUser, 
     token, setToken,

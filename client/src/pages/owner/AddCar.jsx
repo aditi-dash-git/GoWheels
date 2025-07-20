@@ -60,9 +60,8 @@ const AddCar = () => {
       }
     } catch (error) {
       toast.error(error.message);
-    }
-    finally{
-      setIsLoading(false)
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -159,9 +158,18 @@ const AddCar = () => {
               className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
             >
               <option value="">Select a category</option>
+              <option value="Hatchback">Hatchback</option>
               <option value="Sedan">Sedan</option>
               <option value="SUV">SUV</option>
+              <option value="MUV">MUV</option>
               <option value="Van">Van</option>
+              <option value="Compact">Compact</option>
+              <option value="Luxury">Luxury</option>
+              <option value="Electric">Electric</option>
+              <option value="Tempo Traveller">Tempo Traveller</option>
+              <option value="Pickup Truck">Pickup Truck</option>
+              <option value="Convertible">Convertible</option>
+              <option value="Mini Bus">Mini Bus</option>
             </select>
           </div>
         </div>
@@ -223,10 +231,14 @@ const AddCar = () => {
             className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
           >
             <option value="">Select a location</option>
-            <option value="New York">New York</option>
-            <option value="Los Angeles">Los Angeles</option>
-            <option value="Houstan">Houstan</option>
-            <option value="Chicago">Chicago</option>
+            <option value="Bhubaneswar">Bhubaneswar</option>
+            <option value="Cuttack">Cuttack</option>
+            <option value="Puri">Puri</option>
+            <option value="Sambalpur">Sambalpur</option>
+            <option value="Rourkela">Rourkela</option>
+            <option value="Berhampur">Berhampur</option>
+            <option value="Balasore">Balasore</option>
+            <option value="Jharsuguda">Jharsuguda</option>
           </select>
         </div>
 
@@ -246,7 +258,7 @@ const AddCar = () => {
 
         <button className="flex items-center gap-2 px-4 py-2.5 mt-4 bg-primary text-white rounded-md font-medium w-max cursor-pointer">
           <img src={assets.tick_icon} alt="" />
-          {isLoading ? 'Listing' : 'List Your Car'}
+          {isLoading ? "Listing" : "List Your Car"}
         </button>
       </form>
     </div>
